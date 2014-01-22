@@ -12,10 +12,3 @@ end
 
 
 
-# mina = Contact.new(...)
-
-# rolo = Rolodex.new
-# rolo.new_contact
-
-
-
