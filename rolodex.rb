@@ -7,17 +7,7 @@ class Rolodex
 		@id = 1000
 	end
 
-	# def add_new_contact(name, age, email)
-	# 	@id += 1
-	# 	@contacts << Contact.new(@id, name, age, email)
-	# 	@contacts.last
-	#end
-
-	# def find_contact(id)
-	# 	@contacts.each do |c|
-	# 		return c if c.id == id
-	# 	end		
-	# end	
+############# START ADD NEW CONTACT ###################
 
 def add_new_contact
 	puts "\n"
@@ -31,6 +21,12 @@ def add_new_contact
   	contact = Contact.new(@id, name, age, email)
     @contacts << contact
 end	
+
+############# END NEW CONTACT ########################
+
+
+
+############# START MODIFY CONTACT ###################
 
 def modify_contact
 	puts "\n"
@@ -53,6 +49,13 @@ def modify_contact
 
 end
 
+############# END NEW CONTACT ########################
+
+
+
+
+############# START DELETE CONTACT ###################
+
 def delete_contact
 	puts "\n"
 	puts "Enter contact name you would like to delete: "
@@ -65,7 +68,12 @@ def delete_contact
 
 end
 
+############# END DELETE CONTACT ####################
 
+
+
+
+############# START DISPLAY ALL CONTACT #############
 
 def display_all
 	@contacts.each do |contact|
@@ -78,9 +86,20 @@ def display_all
 	end
 end
 
+############# END DISPLAY ALL CONTACT ###############
+
+
+
+############# ADDITIONAL METHOD: FIND CONTACT (to link into 'display attribute') #############
+
 def find_contact(name)
 	@contacts.select {|contact| contact.name == name}.first
 end
+
+################### END ADDITIONAL METHOD: FIND CONTACT  #####################################
+
+
+############# START DISPLAY ATTRIBUTE ###############
 
 def display_attribute
 	print "Enter contact name that you would like to display attributes for: "
@@ -104,5 +123,7 @@ def display_attribute
 	end
 	puts "\n"
 end
+
+############# END DISPLAY ATTRIBUTE ###############
 
 end
